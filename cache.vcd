@@ -1,5 +1,5 @@
 $date
-	Sat Jul 11 21:21:31 2026
+	Sat Jul 11 23:57:32 2026
 $end
 $version
 	Icarus Verilog
@@ -17,9 +17,9 @@ $var wire 32 & mem_addr [31:0] $end
 $var wire 1 ' cpu_ready $end
 $var wire 32 ( cpu_rdata [31:0] $end
 $var parameter 32 ) ADDR_WIDTH $end
-$var parameter 32 * DATA_WIDTH $end
-$var parameter 32 + MEM_WORDS $end
-$var parameter 32 , NUM_LINES $end
+$var parameter 32 * BLOCKS $end
+$var parameter 32 + DATA_WIDTH $end
+$var parameter 32 , MEM_WORDS $end
 $var reg 1 - clk $end
 $var reg 32 . cpu_addr [31:0] $end
 $var reg 1 / cpu_req $end
@@ -54,9 +54,9 @@ $var wire 1 B cache_dirty $end
 $var wire 32 C cache_data_in [31:0] $end
 $var wire 32 D cache_data [31:0] $end
 $var parameter 32 E ADDR_WIDTH $end
-$var parameter 32 F DATA_WIDTH $end
-$var parameter 32 G INDEX_WIDTH $end
-$var parameter 32 H NUM_LINES $end
+$var parameter 32 F BLOCKS $end
+$var parameter 32 G DATA_WIDTH $end
+$var parameter 32 H INDEX_WIDTH $end
 $var parameter 32 I OFFSET_WIDTH $end
 $var parameter 34 J TAG_WIDTH $end
 $scope module cache_controller_inst $end
@@ -78,11 +78,11 @@ $var wire 1 B cache_dirty $end
 $var wire 32 S cache_data [31:0] $end
 $var parameter 32 T ADDR_WIDTH $end
 $var parameter 3 U ALLOCATE $end
-$var parameter 32 V DATA_WIDTH $end
-$var parameter 3 W IDLE $end
-$var parameter 32 X INDEX_WIDTH $end
-$var parameter 3 Y LOOKUP $end
-$var parameter 32 Z NUM_LINES $end
+$var parameter 32 V BLOCKS $end
+$var parameter 32 W DATA_WIDTH $end
+$var parameter 3 X IDLE $end
+$var parameter 32 Y INDEX_WIDTH $end
+$var parameter 3 Z LOOKUP $end
 $var parameter 32 [ OFFSET_WIDTH $end
 $var parameter 34 \ TAG_WIDTH $end
 $var parameter 3 ] UPDATE $end
@@ -117,9 +117,9 @@ $var wire 1 < valid_in $end
 $var wire 1 = valid_out $end
 $var wire 1 ; write_en $end
 $var parameter 32 m ADDR_WIDTH $end
-$var parameter 32 n DATA_WIDTH $end
-$var parameter 32 o INDEX_WIDTH $end
-$var parameter 32 p NUM_LINES $end
+$var parameter 32 n BLOCKS $end
+$var parameter 32 o DATA_WIDTH $end
+$var parameter 32 p INDEX_WIDTH $end
 $var parameter 32 q OFFSET_WIDTH $end
 $var parameter 34 r TAG_WIDTH $end
 $var integer 32 s i [31:0] $end
@@ -168,30 +168,30 @@ b100000 x
 b100000 w
 b11010 r
 b10 q
-b10000 p
-b100 o
-b100000 n
+b100 p
+b100000 o
+b10000 n
 b100000 m
 b10 ^
 b100 ]
 b11010 \
 b10 [
-b10000 Z
-b1 Y
-b100 X
-b0 W
-b100000 V
+b1 Z
+b100 Y
+b0 X
+b100000 W
+b10000 V
 b11 U
 b100000 T
 b11010 J
 b10 I
-b10000 H
-b100 G
-b100000 F
+b100 H
+b100000 G
+b10000 F
 b100000 E
-b10000 ,
-b100000000 +
-b100000 *
+b100000000 ,
+b100000 +
+b10000 *
 b100000 )
 $end
 #0

@@ -3,8 +3,8 @@
 module direct_mapped_cache #(
     parameter ADDR_WIDTH   = 32,
     parameter DATA_WIDTH   = 32,
-    parameter NUM_LINES    = 16,
-    parameter INDEX_WIDTH  = $clog2(NUM_LINES),
+    parameter BLOCKS    = 16,
+    parameter INDEX_WIDTH  = $clog2(BLOCKS),
     parameter OFFSET_WIDTH = $clog2(DATA_WIDTH/8),
     parameter TAG_WIDTH    = ADDR_WIDTH - INDEX_WIDTH - OFFSET_WIDTH
 )(
@@ -54,7 +54,7 @@ module direct_mapped_cache #(
     cache_memory #(
         .ADDR_WIDTH   (ADDR_WIDTH),
         .DATA_WIDTH   (DATA_WIDTH),
-        .NUM_LINES    (NUM_LINES),
+        .BLOCKS    (BLOCKS),
         .INDEX_WIDTH  (INDEX_WIDTH),
         .OFFSET_WIDTH (OFFSET_WIDTH),
         .TAG_WIDTH    (TAG_WIDTH)
@@ -85,7 +85,7 @@ module direct_mapped_cache #(
     cache_controller #(
         .ADDR_WIDTH   (ADDR_WIDTH),
         .DATA_WIDTH   (DATA_WIDTH),
-        .NUM_LINES    (NUM_LINES),
+        .BLOCKS    (BLOCKS),
         .INDEX_WIDTH  (INDEX_WIDTH),
         .OFFSET_WIDTH (OFFSET_WIDTH),
         .TAG_WIDTH    (TAG_WIDTH)

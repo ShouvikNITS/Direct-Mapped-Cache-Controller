@@ -4,7 +4,7 @@ module tb_direct_mapped_cache;
 
     parameter ADDR_WIDTH = 32;
     parameter DATA_WIDTH = 32;
-    parameter NUM_LINES  = 16;
+    parameter BLOCKS  = 16;
     parameter MEM_WORDS  = 256;
 
     reg clk;
@@ -47,7 +47,7 @@ module tb_direct_mapped_cache;
     direct_mapped_cache #(
         .ADDR_WIDTH (ADDR_WIDTH),
         .DATA_WIDTH (DATA_WIDTH),
-        .NUM_LINES  (NUM_LINES)
+        .BLOCKS  (BLOCKS)
     ) DUT (
         .clk   (clk),
         .reset (reset),
