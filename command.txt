@@ -1,0 +1,2 @@
+iverilog -g2012 -o cache_sim cache_memory.v cache_controller.v direct_mapped_cache.v main_memory.v tb_direct_mapped_cache.v
+vvp cache_sim
